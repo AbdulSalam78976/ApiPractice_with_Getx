@@ -33,4 +33,11 @@ class PostController extends GetxController {
       isLoading.value = false;
     }
   }
+
+  Future<void> refreshPosts() async {
+    hasError.value = false;
+    isLoading.value = true;
+    fetchPosts();
+    isLoading.value = false;
+  }
 }
